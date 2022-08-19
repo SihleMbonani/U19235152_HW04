@@ -1,0 +1,32 @@
+﻿@model List<INF272_HW04.Models.Influencers>
+@{
+    ViewBag.Title = "Bio";
+}
+
+<h2>Influencers</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            @foreach (var infl in Model)
+            {
+                <img class="card-img-top" src="@infl.Image" alt="img ">
+                <div class="card-body">
+                    <h5 class="card-title"> @infl.FirstName + @infl.LastName</h5>
+                    <p class="card-text">@infl.UniversityName</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@infl.UniversityName</li>
+
+                    <li class="list-group-item">@infl.CountryName</li>
+                    <li class="list-group-item">@infl.Followers</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Contact Info</a>
+                    <a href="https://thriveglobal.com/" class="card-link">Thrive</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
