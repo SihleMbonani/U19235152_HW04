@@ -142,6 +142,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\Arrianna H-Influencer.jfif" />
     <Content Include="Images\class diagram.jpg" />
+    <Content Include="Images\felicia-montenegro-EEbLJlfCnSI-unsplash.jpg" />
+    <Content Include="Images\georgia-de-lotz-49w9ogvp5_4-unsplash.jpg" />
     <Content Include="Images\images %281%29.jfif" />
     <Content Include="Images\images %282%29.jfif" />
     <Content Include="Images\images %283%29.jfif" />
@@ -154,11 +156,17 @@
     <Content Include="Images\Katya.jfif" />
     <Content Include="Images\OSHN.jfif" />
     <Content Include="Images\Richard Brandson.jfif" />
+    <Content Include="Images\samantha-gades-TUeSlMWC50w-unsplash.jpg" />
+    <Content Include="Images\Screenshot %28534%29.png" />
+    <Content Include="Images\Screenshot %28535%29.png" />
+    <Content Include="Images\Screenshot %28536%29.png" />
+    <Content Include="Images\Screenshot %28537%29.png" />
     <Content Include="Images\SHN Sign.jfif" />
     <Content Include="Images\Stop hunger now.jfif" />
     <Content Include="Images\STOP-HUNGER-NOW-Mandela-Day-Cape-Town-2016.png" />
     <Content Include="Images\StopHungerNow-e1348100260412-610x400.jpg" />
     <Content Include="Images\StopHungerNow.jpg" />
+    <Content Include="Images\tim-marshall-cAtzHUz7Z8g-unsplash.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
