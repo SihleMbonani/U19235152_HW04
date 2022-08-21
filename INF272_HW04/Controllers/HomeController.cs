@@ -1,4 +1,5 @@
 ﻿using INF272_HW04.Models;
+using INF272_HW04.VolunteersDB;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -72,11 +73,95 @@ namespace INF272_HW04.Controllers
             return View();
         }
 
+        //-------Volunteeers------------------------------
+        private readonly VolunteerRepo Vrepo = new VolunteerRepo();
+        //GET : THE VOLUNTEER DETAILS
         public ActionResult Volunteer()
         {
-            ViewBag.Message = "Your application description page.";
+            IEnumerable<VolunteerVM> VolunteerObj = Vrepo.ChooseAllVolunteers();
+            ViewBag.Message = "List of Volunteers.";
 
+            return View(VolunteerObj);
+        }
+
+        //we want the details of the volunteers 
+        public ActionResult VolInfo(int id)
+        {
+            VolunteerVM VolunteerObj = Vrepo.SelectVolunteerByID(id);
+            return View(VolunteerObj);
+        }
+
+        //
+        //GET
+        // We want to create a new volunteer when they apply
+        public ActionResult Create()
+        {
             return View();
+        }
+
+        //
+        // POST: Volunteer
+        [HttpPost]
+        public ActionResult Create(VolunteerVM vol)
+        {
+            try
+            {
+                Vrepo.InsertVol(vol);
+                return RedirectToAction("Volunteer");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        //We are Editing the Volunteer details/Info
+        // GET: Volunteer
+        public ActionResult Edit(int id)
+        {
+            VolunteerVM VolunteerObj = Vrepo.SelectVolunteerByID(id);
+            return View(VolunteerObj);
+        }
+
+        //
+        // POST
+        [HttpPost]
+        public ActionResult Edit(VolunteerVM vol)
+        {
+            try
+            {
+                Vrepo.UpdateVol(vol);
+                return RedirectToAction("Volunteer");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        //We are deleting the Volunteer details
+        // GET:
+        public ActionResult Delete(int id)
+        {
+            VolunteerVM VolunteerObj = Vrepo.SelectVolunteerByID(id);
+            return View(VolunteerObj);
+        }
+
+        //
+        // POST: 
+        [HttpPost]
+        public ActionResult Delete(int id, VolunteerVM vol
+            )
+        {
+            try
+            {
+                Vrepo.DeleteVol(id, vol);
+                return RedirectToAction("Volunteer");
+            }
+            catch
+            {
+                return View();
+            }
         }
 
         public ActionResult Contact()
